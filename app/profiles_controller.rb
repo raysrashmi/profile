@@ -24,7 +24,7 @@ class ProfilesController < UITableViewController
   def tableView(tableView, didSelectRowAtIndexPath:indexPath)
 
   profile = Profile::All[indexPath.row]
-  @detail_controller||= ProfileDetails_controller.alloc.init
+  @detail_controller||= ProfileDetailsController.alloc.init
   navigationController.pushViewController(@detail_controller, animated:true)
   tableView.deselectRowAtIndexPath(indexPath, animated:true)
   end
