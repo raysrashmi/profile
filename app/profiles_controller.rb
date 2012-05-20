@@ -27,6 +27,7 @@ class ProfilesController < UITableViewController
   @detail_controller||= ProfileDetailsController.alloc.init
   navigationController.pushViewController(@detail_controller, animated:true)
   tableView.deselectRowAtIndexPath(indexPath, animated:true)
+   @detail_controller.showDetailsForProfile(profile)
   end
 
 
